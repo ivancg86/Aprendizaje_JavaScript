@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones (dentro de funciones)</title>
+</head>
+<body>
+    <script>
+        //Creamos la función
+        function mostrar(num1, num2) {
+            document.write("Suma: " + (num1 + num2));
+            document.write("<br>");
+            document.write("Resta: " + (num1 - num2));
+            document.write("<br>");
+            document.write("Multiplicación: " + (num1 * num2));
+            document.write("<br>");
+            document.write("División: " + (num1 / num2));
+            document.write("<br>");
+        }
+
+        //Dentro de la función llamamos a la otra función
+        function calculadora(num1, num2, verdad) {
+            if (verdad) {
+                mostrar(num1, num2);
+            }
+            else{
+                mostrar(num2, num1);
+            }
+        }
+        //Creamos las variables para pasar por parametro
+        var num1 = 4;
+        var num2 = 6;
+        var verdad = false;
+        //Llamamos a la función
+        calculadora(num1, num2,verdad);
+    </script>
+</body>
+</html>

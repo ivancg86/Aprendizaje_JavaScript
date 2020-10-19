@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones (Llamada con parametros)</title>
+</head>
+<body>
+    <script>
+        //Creamos la función
+        function calculadora(num1, num2) {
+            document.write("Suma: " + (num1 + num2));
+            document.write("<br>");
+            document.write("Resta: " + (num1 - num2));
+            document.write("<br>");
+            document.write("Multiplicación: " + (num1 * num2));
+            document.write("<br>");
+            document.write("División: " + (num1 / num2));
+            document.write("<br>");
+        }
+        //Creamos las variables para pasar por parametro
+        var num1 = 4;
+        var num2 = 6;
+        //Llamamos a la función y nos muestra lo que hay dentro
+        calculadora(num1, num2);
+    </script>
+</body>
+</html>

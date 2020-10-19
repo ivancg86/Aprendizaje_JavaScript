@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones (Rest y Spread)</title>
+</head>
+<body>
+    <script>
+        //Creamos la función y con los 3 puntos mete el resto de elementos
+        //como si fuera un array (rest)
+        function mostrar(coche1, coche2, ...rest_coches) {
+            document.write("Coche: " + coche1);
+            document.write("<br>");
+            document.write("Coche: " + coche2);
+            document.write("<br>");
+            document.write("Resto de coches: " + rest_coches);
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        //Creamos las variables
+        var coche1 = "Audi";
+        var coche2 = "Ford";
+        var coches = ["Audi", "Ford"];
+        
+        //LLamamos a la función
+        mostrar(coche1, coche2, "Mercedes ", "BMW ", "Nisan ");
+        //Nos recoge los 2 primeros elementos de la array en el spread
+        mostrar(...coches, "Mercedes ", "BMW ", "Nisan ");
+
+    </script>
+</body>
+</html>
