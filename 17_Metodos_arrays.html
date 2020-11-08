@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de arrays</title>
+</head>
+
+<body>
+    <h1>
+        <script>
+            //Variables
+            var colores = ["rojo", "azul", "verde", "negro", "amarillo"];
+
+            //Método toString(): Convierte la arrays eb una cadena de valores separados por comas
+            var cadena = colores.toString();
+            document.write(cadena);
+            document.write("<br>");
+
+            //Método join(): Exactamente igual que toString pero se puede indicar el separador
+            var cadena = colores.join(" + ");
+            document.write(cadena);
+            document.write("<br>");
+
+            //Método pop(): Elimina el ultimo elemento de la array o tambien se puede guardar en una variable
+            colores.pop();
+            for (num1 = 0; num1 < colores.length; num1++) {
+                document.write(colores[num1] + " ");
+            }
+            document.write("<br>");
+
+            //Método push(): Añadimos un elemento al final de la array
+            colores.push("rosa");
+            for (num1 = 0; num1 < colores.length; num1++) {
+                document.write(colores[num1] + " ");
+            }
+            document.write("<br>");
+
+            //Método shift(): Elimina el primer elemento del array y mueve el resto hacia el principio
+            colores.shift();
+            for (num1 = 0; num1 < colores.length; num1++) {
+                document.write(colores[num1] + " ");
+            }
+            document.write("<br>");
+
+            //Método unshift(): Añade un nuevo elemento al array al principio
+            colores.unshift("marron");
+            for (num1 = 0; num1 < colores.length; num1++) {
+                document.write(colores[num1] + " ");
+            }
+            document.write("<br>");
+
+
+
+        </script>
+    </h1>
+</body>
+
+</html>

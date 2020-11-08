@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de numeros</title>
+</head>
+
+<body>
+    <h1>
+        <script>
+            //Variables
+            var num1 = 3;
+            var num2 = 5;
+            var num3 = 4.44444;
+            var num4 = "16";
+
+            //Metodo toString(): Cambia de numerico a cadena texto
+            document.write(num1, " + ", num2, " = ", num1 + num2);
+            document.write("<br>");
+            var numero = num1.toString();
+            document.write(numero, " + ", num2, " = ", numero + num2);
+            document.write("<br>");
+
+            //Metodo toFixed(): Podemos decir cuanto decimales queremos
+            document.write(num3);
+            document.write("<br>");
+            document.write(num3.toFixed(4));
+            document.write("<br>");
+            document.write(num3.toFixed(3));
+            document.write("<br>");
+            document.write(num3.toFixed(2));
+            document.write("<br>");
+
+            //Metodo toPrecision(): Podemos indicar cual es la longitud del número escrito
+            document.write(num3);
+            document.write("<br>");
+            document.write(num3.toPrecision(4));
+            document.write("<br>");
+            document.write(num3.toPrecision(3));
+            document.write("<br>");
+            document.write(num3.toPrecision(2));
+            document.write("<br>");
+
+            //Medoto Number(): Podemos convertir una variable en un número
+            document.write(num4, " + ", num2, " = ", num4 + num2);
+            document.write("<br>");
+            var x = Number(num4);
+            document.write(x, " + ", num2, " = ", x + num2);
+            document.write("<br>");
+
+            //Metodo parseInt(): Podemos convertir una variable en un número entero
+            document.write(num3);
+            document.write("<br>");
+            var x = parseInt(num3);
+            document.write(x);
+            document.write("<br>");
+
+        </script>
+    </h1>
+</body>
+
+</html>

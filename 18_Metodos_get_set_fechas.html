@@ -1,0 +1,92 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos get y set (fechas)</title>
+</head>
+
+<body>
+    <h1>
+        <script>
+            //Variables
+            var fecha = new Date();
+
+            //Método setDate() y getDate(): Indicamos o recogemos el día a la fecha (1 - 31)
+            fecha.setDate(15);
+            document.write(fecha);
+            document.write("<br>");
+            document.write(fecha.getDate());
+            document.write("<br>");
+
+            //Método setMonth() y getMonth(): Indicamos o recogemos el mes a la fecha (0 - 11)
+            fecha.setMonth(9);
+            document.write(fecha);
+            document.write("<br>");
+            document.write(fecha.getMonth());
+            document.write("<br>");
+
+            //Método setFullYear() o getFullYear(): Indicamos o recogemos el año a la fecha
+            //Se añadir tambien el mes y el día
+            fecha.setFullYear(2002);
+            fecha.setFullYear(2002, 11, 25);
+            document.write(fecha);
+            document.write("<br>");
+            document.write(fecha.getFullYear());
+            document.write("<br>");
+
+            //Método setHours() o getHours(): Indicamos o recogemos la hora a la fecha
+            fecha.setHours(22);
+            document.write(fecha);
+            document.write("<br>");
+            document.write(fecha.getHours());
+            document.write("<br>");
+
+            //Método setMinutes() o getMinutes(): Indicamos o recogemos los minutos a la fecha
+            fecha.setMinutes(40);
+            document.write(fecha);
+            document.write("<br>");
+            document.write(fecha.getMinutes());
+            document.write("<br>");
+
+            //Método setSeconds() o getSeconds(): Indicamos o recogemos los segundos a la fecha
+            fecha.setSeconds(50);
+            document.write(fecha);
+            document.write("<br>");
+            document.write(fecha.getSeconds());
+            document.write("<br>");
+
+            //Método getDay(): Nos devuelve el dia de la semana como numero (0 - 6)
+            var dia = fecha.getDay();
+            switch (dia) {
+                case 0:
+                    document.write("Domingo");
+                    break;
+                case 1:
+                    document.write("Lunes");
+                    break;
+                case 2:
+                    document.write("Martes");
+                    break;
+                case 3:
+                    document.write("Miercoles");
+                    break;
+                case 4:
+                    document.write("Jueves");
+                    break;
+                case 5:
+                    document.write("Viernes");
+                    break;
+                case 6:
+                    document.write("Sabado");
+                    break;
+                default:
+                    document.write("Dia erroneo");
+                    break;
+            }
+
+
+
+        </script>
+    </h1>
+</body>
+
+</html>

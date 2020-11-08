@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de cadenas</title>
+</head>
+
+<body>
+    <h1>
+        <script>
+            //Variables
+            var palabra = "coche";
+
+            //Método length: Nos cuenta cuantas letras tiene la palabra
+            document.write(palabra + " tiene " + palabra.length + " letras");
+            document.write("<br>");
+
+            //Método indexOf(): Nos devuelve la posición donde aparece por primera vez
+            //Ademas se puede añadir un segundo parametro para empezar a buscar desde punto concreto
+            var frase = "Yo tengo un coche en el parking, el coche es azul";
+            var pos = frase.indexOf(palabra);
+            document.write(pos);
+            document.write("<br>");
+            var pos = frase.indexOf(palabra, 15);
+            document.write(pos);
+            document.write("<br>");
+
+            //Método lastIndexOf(): Nos devuelve la posición donde aparece por ultima vez
+            //Ademas se puede añadir un segundo parametro para empezar a buscar desde punto concreto hasta el inicio
+            var frase2 = "Yo tengo un coche en el parking, el coche es azul";
+            var pos2 = frase2.lastIndexOf(palabra);
+            document.write(pos2);
+            document.write("<br>");
+            var pos2 = frase2.lastIndexOf(palabra, 20);
+            document.write(pos2);
+            document.write("<br>");
+
+            //Método search(): Exactamente igual que indexOf pero no se le puede añadir posición inicial
+            var frase3 = "Yo tengo un coche en el parking, el coche es azul";
+            var pos3 = frase3.search(palabra);
+            document.write(pos3);
+            document.write("<br>");
+
+            //Método slice(): Nos copia de una cadena a una nueva el contenido de los 2 parametros introducidos
+            //El parametro final no esta incluido
+            var frase4 = "Yo tengo un coche en el parking, el coche es azul";
+            document.write(frase4);
+            document.write("<br>");
+            var copia = frase4.slice(12, 17);
+            document.write(copia);
+            document.write("<br>");
+
+            //Método substr(): Funciona igual que el metodo slice() pero en el segundo parametro indicamos la cantidad de caracteres a copiar
+            var frase5 = "Yo tengo un coche en el parking, el coche es azul";
+            var copia2 = frase5.substr(12, 5);
+            document.write(copia2);
+            document.write("<br>");
+
+            //Método replace(): Reemplaza un valor por otro valor
+            var frase6 = "Yo tengo un coche en el parking, el coche es azul";
+            var rep = frase6.replace("azul","rojo");
+            document.write(rep);
+            document.write("<br>");
+
+            //Métodos toUpperCase() y toLowerCase(): Convierte de mayusculas a minusculas y viceversa
+            var frase7 = "la casa es roja";
+            document.write(frase7.toUpperCase());
+            document.write("<br>");
+            document.write(frase7.toLowerCase());
+            document.write("<br>");
+
+
+            
+
+        </script>
+    </h1>
+</body>
+
+</html>
