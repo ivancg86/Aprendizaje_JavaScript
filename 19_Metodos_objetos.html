@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h1>
+        <script>
+
+            //Array de objetos
+            var personas = [
+                {
+                    firstName: "Ivan",
+                    lastName: "Cabañas",
+                    age: 33,
+                    eyeColor: "azul"
+                },
+                {
+                    firstName: "Andres",
+                    lastName: "Belmonte",
+                    age: 36,
+                    eyeColor: "verde"
+                },
+                {
+                    firstName: "Pedro",
+                    lastName: "Garcia",
+                    age: 23,
+                    eyeColor: "verde"
+                },
+                {
+                    firstName: "Juan",
+                    lastName: "Eusebio",
+                    age: 26,
+                    eyeColor: "azul"
+                },
+                {
+                    firstName: "Roger",
+                    lastName: "Cuesta",
+                    age: 29,
+                    eyeColor: "marron"
+                }
+            ]
+
+            //Metodo sort() por numeros
+            personas.sort(function (a, b) {
+                return parseFloat(a.age) - parseFloat(b.age);
+            });
+
+            personas.forEach(element => {
+                document.write(element.firstName + ' tiene ' + element.age + ' años');
+                document.write("<br>");
+            });
+
+            document.write("<br>");
+
+            //Metodo sort() por texto
+            personas.sort(function (a, b) {
+                return a.firstName.localeCompare(b.firstName);
+            });
+
+            personas.forEach(element => {
+                document.write(element.firstName + ' tiene ' + element.age + ' años');
+                document.write("<br>");
+            });
+
+
+        </script>
+    </h1>
+</body>
+
+</html>
