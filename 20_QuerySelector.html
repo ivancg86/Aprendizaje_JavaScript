@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+
+<body>
+
+    <h2>Menú</h2>
+    <ol id="menu">
+        <li id="primer">
+            <h3>Primer plato</h3>
+            <ul>
+                <li id="primer1" class="platos" title="Macarrones">Macarrones</li>
+                <li id="primer2" class="platos" title="Gazpacho">Gazpacho</li>
+                <li id="primer3" class="platos" title="Judías pintas">Judías pintas</li>
+            </ul>
+        </li>
+        <li id="segundo">
+            <h3>Segundo plato</h3>
+            <ul>
+                <li id="segundo1" class="platos" title="Pollo al ajillo">Pollo al ajillo</li>
+                <li id="segundo2" class="platos" title="Merluza frita">Merluza frita</li>
+            </ul>
+        </li>
+        <li id="postre">
+            <h3>Postre</h3>
+            <ul>
+                <li id="postre1" class="platos" title="Fruta">Fruta</li>
+                <li id="postre2" class="platos" title="Yogur">Yogur</li>
+                <li id="postre3" class="platos" title="Café">Café</li>
+            </ul>
+        </li>
+    </ol>
+    <script>
+        //Recogemos por id
+        valor1 = document.getElementById('primer1').innerText;
+
+        //Recogemos del id menu del id primer el id primer2
+        valor2 = document.querySelector('#menu #primer #primer2').innerText;
+
+        //Cambiamos el valor del id menu del id primer el id primer3
+        document.querySelector('#menu #primer #primer3').innerText = "Lentejas";
+
+        //Cambiamos el valor del id menu del id segundo la clase plato que empiezo por M
+        document.querySelector('#menu #segundo .platos[title^=M]').innerText = "Bacalao";
+
+        valor3 = [];
+
+        //Recogemos del id primer todos los elementos li
+        valor3 = document.querySelectorAll('#primer li');
+        
+        for (let index = 0; index < valor3.length; index++) {
+            console.log(valor3[index].innerText);
+            
+        }
+        console.log(valor2);
+        console.log(valor1);
+        
+    </script>
+</body>
+
+</html>
