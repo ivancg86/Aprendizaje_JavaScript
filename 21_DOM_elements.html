@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM elements</title>
+</head>
+
+<body>
+    <h1 id="titulo">Hola Mundo</h1>
+    <p class="texto" style="color: blue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mattis ipsum.
+        Ut lobortis est at
+        elit efficitur rhoncus et non velit. Nulla eu euismod mauris. Cras sed tellus fermentum, dapibus est ac,
+        suscipit lectus. Duis maximus urna ut diam tempor, et dapibus metus condimentum. Nulla non arcu pharetra,
+        egestas urna at, convallis nulla. Donec et molestie risus. In ullamcorper nisl ac risus luctus, id scelerisque
+        tortor molestie. Vestibulum finibus eros ut aliquet condimentum. Etiam luctus velit augue, in hendrerit metus
+        luctus a. Sed eget lacus maximus, tincidunt mauris at, interdum nunc. Vivamus at risus lacus. </p>
+
+    <p class="texto2" style="color: red;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mattis ipsum.
+        Ut lobortis est at
+        elit efficitur rhoncus et non velit. Nulla eu euismod mauris. Cras sed tellus fermentum, dapibus est ac,
+        suscipit lectus. Duis maximus urna ut diam tempor, et dapibus metus condimentum. Nulla non arcu pharetra,
+        egestas urna at, convallis nulla. Donec et molestie risus. In ullamcorper nisl ac risus luctus, id scelerisque
+        tortor molestie. Vestibulum finibus eros ut aliquet condimentum. Etiam luctus velit augue, in hendrerit metus
+        luctus a. Sed eget lacus maximus, tincidunt mauris at, interdum nunc. Vivamus at risus lacus. </p>
+
+    <script>
+        //Recogemos el elemento por id titulo y le cambiamos el contenido por Hola
+        document.getElementById("titulo").textContent = "Hola";
+
+        //Recogemos el una variable los elementos por clase y nos devuelve una array de con todos
+        var texto = document.getElementsByClassName("texto");
+
+        //Le modificamos el color del textoque originalmente era azul por negro
+        texto[0].style.color = "black";
+
+        //Recogemos todos los elementos por Tag
+        var p = document.getElementsByTagName("p");
+
+        //Recogemos el texto pasandolo a negrita
+        var parrafo = p[1].innerHTML.bold();
+
+        //Le asignamos el nuevo texto modificado
+        p[1].innerHTML = parrafo;
+
+
+    </script>
+</body>
+
+</html>
