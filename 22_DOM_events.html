@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM elements</title>
+
+    <script>
+        //Cuando estamos sobre el elemento cambiara el texto a Hola
+        function cambio(x) {
+            x.innerHTML = "Hola";
+            x
+        }
+
+        //Cuando salimos del elemento cambiara al texto anterior
+        function cambioOut(x) {
+            x.innerHTML = "Hola Mundo";
+        }
+
+        //Cuando hacemos click sobre el boton nos mostrara la fecha en un parrafo
+        function clic() {
+            document.getElementById("fecha").innerHTML = Date();
+        }
+
+        //Cuando introduzcamos un nombre al presionar enter nos lo pondra en mayusculas
+        function cambiarNombre() {
+            var y = document.getElementById("nombre");
+            y.value = y.value.toUpperCase();
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1 id="titulo" onmouseover="cambio(this)" onmouseout="cambioOut(this)" style="background-color: cornflowerblue;">
+        Hola Mundo</h1>
+    <button onclick="clic()">
+        Click Me
+    </button>
+
+    <p id="fecha"></p>
+
+    <Label>Introduce tu nombre</Label>
+    <input type="text" id="nombre" onchange="cambiarNombre()">
+</body>
+
+</html>
