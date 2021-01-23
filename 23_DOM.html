@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+
+</head>
+
+<body>
+    <h1 id="titulo">Hola Mundo</h1>
+
+    <p id="primer">Pasa por encima del primer paragrafo para cambiar el estilo</p>
+    <p id="parrafo1" onmouseover="cambio(this)" onmouseout="cambioOut(this)">Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Proin varius maximus magna quis aliquet.
+        Mauris vitae
+        efficitur dolor. Praesent porttitor quam auctor diam dapibus, id egestas ex bibendum. Nullam ornare commodo
+        pellentesque. Nam massa orci, venenatis sit amet molestie ut, tristique quis leo. Curabitur id quam nisi.
+        Vivamus porta leo ligula, id volutpat libero volutpat vel. Mauris non condimentum dolor. Etiam sit amet auctor
+        est, in auctor ante. Cras eget pharetra tellus. Duis pretium vitae dui placerat vehicula. Fusce risus metus,
+        commodo non lacus vitae, venenatis posuere risus. Curabitur placerat odio tempus varius ornare. </p>
+
+    <p id="parrafo2" onmouseover="cambioColor(this)" onmouseout="volverColor(this)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+        varius maximus magna quis aliquet.
+        Mauris vitae
+        efficitur dolor. Praesent porttitor quam auctor diam dapibus, id egestas ex bibendum. Nullam ornare commodo
+        pellentesque. Nam massa orci, venenatis sit amet molestie ut, tristique quis leo. Curabitur id quam nisi.
+        Vivamus porta leo ligula, id volutpat libero volutpat vel. Mauris non condimentum dolor. Etiam sit amet auctor
+        est, in auctor ante. Cras eget pharetra tellus. Duis pretium vitae dui placerat vehicula. Fusce risus metus,
+        commodo non lacus vitae, venenatis posuere risus. Curabitur placerat odio tempus varius ornare. </p>
+
+    <p id="parrafo3" onmouseover="cambioLetra(this)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius maximus magna quis aliquet.
+        Mauris vitae
+        efficitur dolor. Praesent porttitor quam auctor diam dapibus, id egestas ex bibendum. Nullam ornare commodo
+        pellentesque. Nam massa orci, venenatis sit amet molestie ut, tristique quis leo. Curabitur id quam nisi.
+        Vivamus porta leo ligula, id volutpat libero volutpat vel. Mauris non condimentum dolor. Etiam sit amet auctor
+        est, in auctor ante. Cras eget pharetra tellus. Duis pretium vitae dui placerat vehicula. Fusce risus metus,
+        commodo non lacus vitae, venenatis posuere risus. Curabitur placerat odio tempus varius ornare. </p>
+
+    <button id="boton" onclick="clic()">Pulsame para verme</button>
+    <button id="boton" onclick="color()">Cambiame de color</button>
+    <button id="boton" onclick="negrita()">Ponme en negrita</button>
+    <p id="parrafo4"></p>
+    <script>
+        var i = 0;
+        var g = 0;
+
+        document.getElementById("primer").style.backgroundColor = "yellow";
+        document.getElementById("titulo").innerHTML = "Bienvenidos a las pruebas de DOM";
+        document.body.style.backgroundColor = "cornflowerblue";
+
+        //Al hacer click sobre el boton nos muestra el parrafo
+        function clic() {
+            document.getElementById("parrafo4").innerHTML = "Gracias por pulsarme";
+        }
+
+        //Cada vez que pulsamos el boton nos da un color diferente
+        function color() {
+            switch (i) {
+                case 0:
+                    document.getElementById("parrafo4").style.color = "red";
+                    i++;
+                    break;
+                case 1:
+                    document.getElementById("parrafo4").style.color = "yellow";
+                    i++;
+                    break;
+                case 2:
+                    document.getElementById("parrafo4").style.color = "black";
+                    i++;
+                    break;
+                case 3:
+                    document.getElementById("parrafo4").style.color = "blue";
+                    i++;
+                    break;
+                case 4:
+                    document.getElementById("parrafo4").style.color = "green";
+                    i = 0;
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+
+        //Al pulsar sobre el boton nos muestra el parrafo en negrita
+        function negrita() {
+            var texto = document.getElementById("parrafo4").innerHTML;
+            texto = texto.bold();
+            document.getElementById("parrafo4").innerHTML = texto;
+        }
+
+        //Al pasar por encima nos muestra el texto en negrita
+        function cambio(texto) {
+            var m = texto.innerHTML;
+            m = m.bold();
+            texto.innerHTML = m;
+        }
+
+        //Al salir del texto cambia el formato al original
+        function cambioOut(texto) {
+            texto.innerHTML = document.getElementById("parrafo2").innerHTML;
+        }
+
+        //Al pasar por encima nos cambia el color de fondo cada vez diferente
+        function cambioColor(fondo) {
+            switch (g) {
+                case 0:
+                    fondo.style.backgroundColor = "red";
+                    g++;
+                    break;
+                case 1:
+                    fondo.style.backgroundColor = "green";
+                    g++;
+                    break;
+                case 2:
+                    fondo.style.backgroundColor = "white";
+                    g++;
+                    break;
+                case 3:
+                    fondo.style.backgroundColor = "purple";
+                    g = 0;
+                    break;
+
+                default:
+                    break;
+            }
+            
+        }
+
+        //Al salir de encima volvemos al color original
+        function volverColor(fondo) {
+            fondo.style.backgroundColor = "cornflowerblue";
+        }
+
+        //Al pasar por encima nos cambia el estilo de letra
+        function cambioLetra(letra) {
+            var a = letra.innerHTML;
+            letra.style.fontStyle = "Italic";
+            letra.innerHTML = a;
+        }
+
+    </script>
+
+</body>
+
+</html>
