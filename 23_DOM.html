@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
-
+    <style>
+        [class|=ho]{
+            background-color: darkmagenta;
+        }
+    </style>
 
 </head>
 
 <body>
-    <h1 id="titulo">Hola Mundo</h1>
+    <h1 id="titulo" class="ho-vo">Hola Mundo</h1>
 
     <p id="primer">Pasa por encima del primer paragrafo para cambiar el estilo</p>
     <p id="parrafo1" onmouseover="cambio(this)" onmouseout="cambioOut(this)">Lorem ipsum dolor sit amet, consectetur
@@ -42,6 +46,7 @@
     <button id="boton" onclick="clic()">Pulsame para verme</button>
     <button id="boton" onclick="color()">Cambiame de color</button>
     <button id="boton" onclick="negrita()">Ponme en negrita</button>
+    <button id="boton" onclick="borrar()">Borrar elemento</button>
     <p id="parrafo4"></p>
     <script>
         var i = 0;
@@ -141,6 +146,11 @@
             var a = letra.innerHTML;
             letra.style.fontStyle = "Italic";
             letra.innerHTML = a;
+        }
+
+        //Al hacer click eliminamos el parrafo
+        function borrar() {
+            document.getElementById("parrafo4").remove();
         }
 
     </script>
