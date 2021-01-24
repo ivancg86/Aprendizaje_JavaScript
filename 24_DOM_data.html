@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM elements</title>
+</head>
+
+<body>
+    <ol>
+        <li data-edad="18">Carlos</li>
+        <li data-edad="42">Pedro</li>
+        <li data-edad="36">Antonio</li>
+        <li data-edad="15">Jesus</li>
+        <li data-edad="26">Sandra</li>
+        <li data-edad="45">Carla</li>
+        <li data-edad="19">Maria</li>
+        <li data-edad="29">Laura</li>
+    </ol>
+    <h1 id="total"></h1>
+
+    <script>
+        
+        var edades = [];
+        var total = 0;
+        var personas = 0;
+         var datos = document.getElementsByTagName("li");
+         for (index = 0; index < datos.length; index++) {
+            edades.push(datos[index].dataset.edad);
+         }
+         for (index = 0; index < edades.length; index++) {
+            total = total + parseInt(edades[index]);
+            personas = index + 1;
+         }
+         personas = total / personas;
+        document.getElementById("total").innerText = "La media de edad es de " + personas;
+        console.log(total);
+
+    </script>
+</body>
+
+</html>
