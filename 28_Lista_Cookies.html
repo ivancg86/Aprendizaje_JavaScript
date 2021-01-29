@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Cookies</title>
+</head>
+<body>
+    <script>
+        var lista = new Array(new Array("Alex", 18), new Array("Pedro", 22), new Array("Andres", 33),
+        new Array("Carla", 24), new Array("Sandra", 16));
+        for (let index = 0; index < lista.length; index++) {
+            document.cookie = ("nombre"+index+"="+lista[index][0]+"; ");
+            document.cookie = ("edad"+index+"="+lista[index][1]+";");   
+        }
+        alert(document.cookie);
+    </script>
+</body>
+</html>
