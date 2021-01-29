@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 id="nom" style="color: blue;">Carlos</h1>
+    <h4 id="apellido" style="color: blueviolet;">Marin</h4>
+
+    <h2 id="nom2" style="color: red;"></h2>
+    <h3 id="apellido2" style="color: green;"></h3>
+
+
+    <script type="text/javascript">
+        var nom = document.getElementById("nom").innerText;
+        var apel = document.getElementById("apellido").innerText;
+
+        localStorage.setItem("Nombre", nom);
+        localStorage.setItem("Apellido", apel);
+
+        var nombre = localStorage.getItem("Nombre");
+        var apellido = localStorage.getItem("Apellido");
+
+        document.getElementById("nom2").innerHTML = nombre;
+        document.getElementById("apellido2").innerHTML = apellido;
+
+    </script>
+</body>
+</html>
