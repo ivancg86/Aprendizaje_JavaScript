@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cookie</title>
+</head>
+<body>
+    <h1 id="nom">Pedro</h1>
+    <a rel="stylesheet" href="./27_Recuperar_Cookie.html">Recuperar Cookie</a>
+    <script>
+        var nom = document.getElementById("nom").innerText;
+        crearModifCookie();
+        
+
+
+        function crearModifCookie(){
+            var nombre = "cookie";
+            var valor = document.getElementById("nom").innerText;
+            document.cookie = nombre+"="+valor+";";
+            
+        }
+        
+    </script>
+</body>
+</html>
